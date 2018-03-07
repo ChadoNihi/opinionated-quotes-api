@@ -21,5 +21,9 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
     quote
     |> cast(attrs, [:who, :quote, :lang, :src, :author])
     |> validate_required([:quote])
+    |> validate_length(:author, min: 2)
+    |> validate_length(:quote, min: 2)
+    |> validate_length(:src, min: 2)
+    |> validate_length(:who, min: 2)
   end
 end
