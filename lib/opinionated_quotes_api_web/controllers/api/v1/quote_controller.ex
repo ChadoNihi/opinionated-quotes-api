@@ -1,9 +1,9 @@
-defmodule OpinionatedQuotesApiWeb.QuoteController do
+defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
   use OpinionatedQuotesApiWeb, :controller
   alias OpinionatedQuotesApi.QuoteAPI.QuoteAPI
 
   @n_all_re ~r/^all$/i
-  @true_vals_for_rand MapSet.new(["", "true", "1", "t"])
+  @true_vals_for_rand MapSet.new([nil, "", "true", "1", "t"])
 
   def get_quotes(conn, params) do
     rand = if MapSet.member?(@true_vals_for_rand, params["rand"]), do: true, else: false

@@ -19,9 +19,11 @@ defmodule OpinionatedQuotesApiWeb.Router do
     get "/", PageController, :index
   end
 
-  scope "/quotes", OpinionatedQuotesApiWeb do
+  scope "/api", OpinionatedQuotesApiWeb.API, as: :api do
     pipe_through :api
 
-    get "/", QuoteController, :get_quotes
+    scope "/v1", V1, as: :v1 do
+      get "/quotes", QuoteController, :get_quotes
+    end
   end
 end
