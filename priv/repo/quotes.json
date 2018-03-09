@@ -1,0 +1,23 @@
+{
+  "quotes": [
+    {
+      "who": "Dr. Valentine Pilman",
+      "quote": "The hypothesis of God, for instance, gives an incomparably absolute opportunity to understand everything and know absolutely nothing. Give man an extremely simplified system of the world and explain every phenomenon away on the basis of that system. An approach like that doesn't require any knowledge. Just a few memorized formulas plus so-called intuition and so-called common sense.",
+      "source": "Roadside Picnic",
+      "author": "Arkady and Boris Strugatsky",
+      "tags": ["god", "science", "skepticism"]
+    },
+    {
+      "quote": "[I]t isn't difficult to dissociate one's feelings from a mere printed litany of frightfulness. It's easy to convince oneself that things can't really be that terrible, that the horror I allude to is being overblown, that what is going on elsewhere in space-time is somehow less real than the here-and-now, or that the good in the world somehow offsets the bad. Yet however vividly one thinks one can imagine what agony, torture or suicidal despair must be like, the reality is inconceivably worse. The force of \"inconceivably\" is itself largely inconceivable here. Blurry images of Orwell's \"Room 101\" can barely even hint at what I'm talking about. Even if one's ancestral namesakes [aka \"younger self\"] underwent great pain, then the state-dependence of memories means that much of pain's sheer dreadfulness is semantically, cognitively and emotionally inaccessible in the here-and-now.",
+      "source": "The Hedonistic Imperative",
+      "author": "David Pearce",
+      "tags": ["suffering", "horror", "psychedelic"]
+    },
+    {
+      "quote": "It's not that there are no differences between human and non-human animals, any more than there are no differences between black people and white people, freeborn citizens and slaves, men and women, Jews and gentiles, gays or heterosexuals. The question is rather: are they morally relevant differences? This matters because morally catastrophic consequences can ensue when we latch on to a real but morally irrelevant difference between sentient beings.",
+      "source": "The Abolitionist Project",
+      "author": "David Pearce",
+      "tags": ["ethics", "vegan", "discrimination", "antispeciesism"]
+    }
+  ]
+}
