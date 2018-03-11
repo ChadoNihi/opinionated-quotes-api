@@ -28,21 +28,16 @@ defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
       raw -> String.trim(raw)
     end
 
-    tags = Map.get(params, "tags", "")
-    |> String.split(",")
-    |> Enum.reduce([], fn(raw_tag, acc) ->
-      case String.trim(raw_tag) |> String.downcase() do
-        "" -> acc
-        tag -> [tag | acc]
-      end
-    end)
-    |> Enum.uniq()
-
     lang = Map.get(params, "lang", "en")
     |> String.trim()
     |> String.downcase()
 
-    json(conn, QuoteAPI.list_quotes(rand: rand, n: n, offset: offset, author: author, lang: lang))
+    json(
+      conn,
+      QuoteAPI.list_quotes(
+        rand: rand, n: n, offset: offset, author: author, tags: params["tags"], lang: lang
+      )
+    )
   end
   def get_quotes(conn, params) do
     redirect(conn, to: api_v1_quote_path(
