@@ -18,9 +18,7 @@ defmodule Seeder do
   def seed_quotes_from_json(flname) do
     get_quotes(flname)
     |> Enum.each(&(
-      OpinionatedQuotesApi.Repo.insert!(
-        %Quote{}, &1
-      )
+      Quote.insert_or_update_quote_with_tags(%Quote{}, &1)
     ))
   end
 
