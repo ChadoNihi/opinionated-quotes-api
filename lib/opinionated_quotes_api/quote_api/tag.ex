@@ -7,6 +7,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Tag do
   alias OpinionatedQuotesApi.Repo
 
 
+  @derive {Poison.Encoder, only: [:name]}
   schema "tags" do
     field :name, :string
     # many_to_many :quotes, Quote, join_through: "quotes_tags"

@@ -30,7 +30,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
     tags = params[:tags]
     lang = params[:lang]
 
-    from(q in Quote, offset: ^offset)
+    from(q in Quote, offset: ^offset, preload: [:tags])
   end
   # def list_quotes(false, n \\ 1, offset \\ 0) do
   #   Repo.all(Quote, (from q in Quote, limit: ^n, offset: ^offset))

@@ -34,9 +34,9 @@ defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
 
     json(
       conn,
-      QuoteAPI.list_quotes(
+      %{quotes: QuoteAPI.list_quotes(
         rand: rand, n: n, offset: offset, author: author, tags: params["tags"], lang: lang
-      )
+      )}
     )
   end
   def get_quotes(conn, params) do

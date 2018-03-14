@@ -5,7 +5,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
   alias OpinionatedQuotesApi.QuoteAPI.Quote
   alias OpinionatedQuotesApi.Repo
 
-
+  @derive {Poison.Encoder, except: [:__meta__]}
   schema "quotes" do
     field :author, :string
     field :quote, :string
