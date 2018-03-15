@@ -4,9 +4,11 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
   """
 
   import Ecto.Query, warn: false
+  alias OpinionatedQuotesApi.Helpers.Sanitizer
+  alias OpinionatedQuotesApi.QuoteAPI.Quote
   alias OpinionatedQuotesApi.Repo
 
-  alias OpinionatedQuotesApi.QuoteAPI.Quote
+  @max_n 100
 
   @doc """
   Returns the list of quotes.
@@ -24,13 +26,36 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
 
   defp build_query_from_params(params) do
     rand = params[:rand]
-    n = params[:n]
+    n = params[:n] || @max_n
     offset = params[:offset]
-    author = params[:author]
+    author = params[:author] && Sanitizer.sanitize_sql_like(params[:author])
     tags = params[:tags]
-    lang = params[:lang]
+    lang = Sanitizer.sanitize_sql_like(params[:lang]) |> String.downcase
 
-    from(q in Quote, offset: ^offset, preload: [:tags])
+    where = build_where(author, lang)
+
+    from(q in Quote,
+      where: ^where,
+      offset: ^offset,
+      limit: ^n,
+      preload: [:tags]
+    )
+  end
+
+  defp build_where(author, lang) do
+    # https://hexdocs.pm/ecto/Ecto.Query.html#dynamic/2
+    dynamic = true
+
+    if author do
+      dynamic([q], ilike(q.author, ^author) or ^dynamic)
+    else
+      dynamic
+    end
+
+    dynamic([q], (
+      (is_nil(q.lang) and ^lang == "en")
+      or q.lang == ^lang
+    ) or ^dynamic)
   end
   # def list_quotes(false, n \\ 1, offset \\ 0) do
   #   Repo.all(Quote, (from q in Quote, limit: ^n, offset: ^offset))
