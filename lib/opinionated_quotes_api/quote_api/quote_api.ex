@@ -19,27 +19,34 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
       [%Quote{}, ...]
 
   """
-  def list_quotes(params) do
-    build_query_from_params(params)
+  def list_quotes(args) do
+    build_query_from_args(args)
     |> Repo.all()
   end
 
-  defp build_query_from_params(params) do
-    rand = params[:rand]
-    n = params[:n] || @max_n
-    offset = params[:offset]
-    author = params[:author] && Sanitizer.sanitize_sql_like(params[:author])
-    tags = params[:tags]
-    lang = Sanitizer.sanitize_sql_like(params[:lang]) |> String.downcase
+  defp build_query_from_args(args) do
+    rand = args[:rand]
+    n = args[:n] || @max_n
+    offset = args[:offset]
+    author = args[:author] && Sanitizer.sanitize_sql_like(args[:author])
+    tags = args[:tags]
+    lang = Sanitizer.sanitize_sql_like(args[:lang]) |> String.downcase
 
     where = build_where(author, lang)
 
-    from(q in Quote,
+    q = from(q in Quote,
       where: ^where,
       offset: ^offset,
       limit: ^n,
       preload: [:tags]
     )
+
+    if rand do
+      # TODO: find a way to use faster TABLESAMPLE SYSTEM w/o raw query
+      order_by(q, fragment("random()"))
+    else
+      q
+    end
   end
 
   defp build_where(author, lang) do

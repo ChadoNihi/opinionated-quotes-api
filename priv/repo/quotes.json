@@ -24,6 +24,53 @@
       "source": "Animal Liberation",
       "author": "Peter Singer",
       "tags": ["ethics", "vegan", "discrimination", "antispeciesism"]
+    },
+    {
+      "quote": "[B]oth natural selection and the historical record offer powerful reasons for doubting the trustworthiness of our naive moral intuitions. So the possibility that human civilisation might be founded upon some monstrous evil should be taken seriously - even if the possibility seems transparently absurd at the time.",
+      "source": "The Antispeciesist Revolution",
+      "author": "David Pearce",
+      "tags": ["ethics", "vegan", "evolution", "history"]
+    },
+    {
+      "quote": "When one is gripped by excruciating physical pain, one is always shocked at just how frightful it can be.",
+      "source": "The Abolitionist Project",
+      "author": "David Pearce",
+      "tags": ["suffering", "pain", "psychedelic"]
+    },
+    {
+      "quote": "[A marketing orientation in evolution] puts courtship at the heart of modern biology, as marketing is at the heart of modern business.",
+      "source": "The Mating Mind: How Sexual Choice Shaped the Evolution of Human Nature",
+      "author": "Geoffrey Miller",
+      "tags": ["evolution", "science", "analogy", "animals"]
+    },
+    {
+      "quote": "A computer cannot realise a solution of the Navier-Stokes equations in which the solution variables refer to atmospheric pressure, velocity, density etc. because a computer does not possess these quantities. A computer can only represent variables such as atmospheric pressure.",
+      "source": "Universe creation on a computer",
+      "author": "Gordon McCabe",
+      "tags": ["AI", "computer science", "simulation"]
+    },
+    {
+      "quote": "One should be wary of assuming that we're the folk who can properly look after ourselves, whereas our descendants, if they become genetically pre-programmed ecstatics, will get trapped in robot-serviced states of infantile dependence. For it shouldn't be forgotten that exuberantly happy people also have a fierce will to survive. They love life dearly. They take on daunting challenges against seemingly impossible odds. One of the hallmarks of many endogenous depressive states, on the other hand, is so-called behavioural despair. If one learns that apparently no amount of effort can rescue one from an aversive stimulus, then one tends to sink into a lethargic stupor. This syndrome of \"learned helplessness\" may persist even when the opportunity to escape from the nasty stimulus subsequently arises.",
+      "source": "The Hedonistic Imperative",
+      "author": "David Pearce",
+      "tags": ["suffering", "transhumanism", "future"]
+    },
+    {
+      "quote": "[A] good estimate is an estimate that provides a clear enough view of the project reality to allow the project leadership to make good decisions about how to control the project to hit its targets.",
+      "source": "Software Estimation: Demystifying the Black Art",
+      "author": "Steve McConnell",
+      "tags": ["software engineering", "management", "business"]
+    },
+    {
+      "quote": "A man generally has two reasons for doing a thing; one that sounds good, and a real one.",
+      "author": "John Pierpont Morgan",
+      "tags": ["rationalisation", "short"]
+    },
+    {
+      "quote": "[A] recursive definition (when properly formulated) never leads to infinite regress or paradox. This is because a recursive definition never defines something in terms of itself, but always in terms of simpler versions of itself.",
+      "source": "Gödel, Escher, Bach: An Eternal Golden Braid",
+      "author": "Douglas Hofstadter",
+      "tags": ["mathematics", "recursion", "paradox"]
     }
   ]
 }
