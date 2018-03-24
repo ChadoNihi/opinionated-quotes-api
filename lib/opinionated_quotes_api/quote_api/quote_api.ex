@@ -8,8 +8,6 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
   alias OpinionatedQuotesApi.QuoteAPI.Quote
   alias OpinionatedQuotesApi.Repo
 
-  @max_n 100
-
   @doc """
   Returns the list of quotes.
 
@@ -26,7 +24,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
 
   defp build_query_from_args(args) do
     rand = args[:rand]
-    n = args[:n] || @max_n
+    n = args[:n] || 1
     offset = args[:offset]
     author = args[:author] && Sanitizer.sanitize_sql_like(args[:author])
     tags = args[:tags]
