@@ -48,8 +48,11 @@ defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
     # )
   end
   def get_quotes(conn, params) do
+    kw_params =
+      Enum.reduce(params, [], fn {k, v}, acc ->  [{String.to_atom(k), v} | acc] end)
+      
     redirect(conn, to: api_v1_quote_path(
-      conn, :get_quotes, Keyword.merge([rand: "t", n: 1], Keyword.new(params))
+      conn, :get_quotes, Keyword.merge([rand: "t", n: 1], kw_params)
     ))
   end
 

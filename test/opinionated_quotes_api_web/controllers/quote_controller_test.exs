@@ -31,5 +31,13 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
 
       assert response["error"] =~ "'n' query parameter (if present) should be a positive integer or 'max'"
     end
+
+    test "GET return an error on corrupt 'offset'", %{conn: conn} do
+      response =
+        get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: 1, offset: "jk77ggggg"))
+        |> json_response(400)
+
+      assert response["error"] =~ "'offset' query parameter should be a non-negative integer if present"
+    end
   end
 end
