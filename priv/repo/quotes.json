@@ -77,6 +77,49 @@
       "source": "Utopian Neuroscience",
       "author": "David Pearce",
       "tags": ["altruism", "transhumanism", "future", "paradise engineering"]
+    },
+    {
+      "quote": "[M]en are only as good as their technical development allows them to be.",
+      "source": "Charles Dickens",
+      "author": "George Orwell",
+      "tags": ["transhumanism", "technology", "nature"]
+    },
+    {
+      "quote": "If liberty means anything at all, it means the right to tell people what they do not want to hear.",
+      "source": "Animal Farm",
+      "author": "George Orwell",
+      "tags": ["liberty", "freedom", "offense", "short"]
+    },
+    {
+      "quote": "We can interpret any piece of matter as being conscious if we want to, but in many cases it doesn't make sense to most of us to speak that way. Panpsychism is analogous to \"pantableism\" -- the view that tableness is intrinsic to all matter. There is some sense in which you can interpret any piece of matter as being a table. After all, for any (solid) clump of atoms, you can put stuff on it, and it can support the things that it holds. But this definition is really a stretch for most objects. So it is with saying that everything is conscious.",
+      "source": "Dissolving Confusion about Consciousness",
+      "author": "Brian Tomasik",
+      "tags": ["consciousness", "panpsychism", "analogy"]
+    },
+    {
+      "quote": "In a triumph of aestheticism over morality, many animal lovers otherwise sympathetic to the sentiments expressed here will doubtless be aghast at the very idea of losing such lovable companions and time-honoured killers as members of the cat family; but then they are unlikely to be hunted down in terror or physically eaten alive, which lends a rather different perspective to any issue at all.",
+      "source": "The Taste Of Depravity",
+      "author": "David Pearce",
+      "tags": ["ethics", "nature", "cats", "predation", "suffering"]
+    },
+    {
+      "who": "Richard Noonan",
+      "quote": "[A] person needs money in order to never think about them.",
+      "source": "Roadside Picnic",
+      "author": "Arkady and Boris Strugatsky",
+      "tags": ["money", "short"]
+    },
+    {
+      "quote": "[I]nstead of trying to ensure that humanity survives, we should prioritize making the future less bad, in case it will contain sentient life.",
+      "source": "How Could an Empty World Be Better than a Populated One?",
+      "author": "Simon Knutsson",
+      "tags": ["ethics", "future", "suffering", "s-risks", "x-risks"]
+    },
+    {
+      "quote": "[T]here's no forces stopping us from making [the world] better, from fixing it; and the only thing stopping us is the fact that we don't have right ideas in people's [...] heads.",
+      "source": "Knowledge, Intelligence, Wisdom....just do it.",
+      "author": "inmendham",
+      "tags": ["politics", "ideas"]
     }
   ]
 }
