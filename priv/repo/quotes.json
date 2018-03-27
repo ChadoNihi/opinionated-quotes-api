@@ -4,7 +4,7 @@
       "who": "Dr. Valentine Pilman",
       "quote": "The hypothesis of God, for instance, gives an incomparably absolute opportunity to understand everything and know absolutely nothing. Give man an extremely simplified system of the world and explain every phenomenon away on the basis of that system. An approach like that doesn't require any knowledge. Just a few memorized formulas plus so-called intuition and so-called common sense.",
       "source": "Roadside Picnic",
-      "author": "Arkady and Boris Strugatsky",
+      "author": "Arkady Strugatsky, Boris Strugatsky",
       "tags": ["god", "science", "skepticism"]
     },
     {
@@ -106,7 +106,7 @@
       "who": "Richard Noonan",
       "quote": "[A] person needs money in order to never think about them.",
       "source": "Roadside Picnic",
-      "author": "Arkady and Boris Strugatsky",
+      "author": "Arkady Strugatsky, Boris Strugatsky",
       "tags": ["money", "short"]
     },
     {
@@ -120,6 +120,47 @@
       "source": "Knowledge, Intelligence, Wisdom....just do it.",
       "author": "inmendham",
       "tags": ["politics", "ideas"]
+    },
+    {
+      "quote": "The question is not Can they reason?, nor Can they talk?, but Can they suffer?",
+      "source": "An Introduction to the Principles of Morals and Legislation",
+      "author": "Jeremy Bentham",
+      "tags": ["suffering", "animals", "ethics"]
+    },
+    {
+      "quote": "AI researchers have devoted little effort to passing the Turing Test, believing that it is more important to study the underlying principles of intelligence than to duplicate an exemplar. The quest for \"artificial flight\" succeeded when the Wright brothers and others stopped imitating birds and started using wind tunnels and learning about aerodynamics. Aeronautical engineering texts do not define the goal of their field as making \"machines that fly so exactly like pigeons that they can fool even other pigeons.\"",
+      "source": "Artificial Intelligence: A Modern Approach",
+      "author": "Stuart Russell, Peter Norvig",
+      "tags": ["AI", "science", "analogy"]
+    },
+    {
+      "quote": "[W]hat special competence does a priest, rabbi, or imam have to judge the ethical implications of embryonic stem-cell research, family planning, or preventative war? The truth is that a person’s knowledge of a scriptural tradition is no more relevant to ethics than it is to astronomy.",
+      "source": "Letter to a Christian Nation",
+      "author": "Sam Harris",
+      "tags": ["religion", "ethics"]
+    },
+    {
+      "quote": "Choosing beliefs freely is not what rational minds do.",
+      "source": "The Moral Landscape: How Science Can Determine Human Values",
+      "author": "Sam Harris",
+      "tags": ["religion", "rationality", "skepticism", "short"]
+    },
+    {
+      "quote": "Consciousness has to be something, and it's not any stranger for it to be certain physical operations than for it to be anything else.",
+      "source": "Dissolving Confusion about Consciousness",
+      "author": "Brian Tomasik",
+      "tags": ["consciousness"]
+    },
+    {
+      "quote": "Constraints are often advantages in disguise. Forget about venture capital, long release cycles, and quick hires. Instead, work with what you have.",
+      "source": "Getting Real: The Smarter, Faster, Easier Way to Build a Web Application",
+      "author": "37signals",
+      "tags": ["advice", "startup", "business"]
+    },
+    {
+      "quote": "Do not be too moral. You may cheat yourself out of much life so. Aim above morality. Be not simply good, be good for something.",
+      "author": "Henry David Thoreau",
+      "tags": ["utilitarianism", "ethics", "religion", "secularism"]
     }
   ]
 }

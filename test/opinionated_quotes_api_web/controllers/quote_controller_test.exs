@@ -2,13 +2,13 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
   use OpinionatedQuotesApiWeb.ConnCase
   # alias OpinionatedQuotesApi.QuoteAPI.Quote
 
-  describe "api_v1_quote_path" do
-    test "GET with no params redirects", %{conn: conn} do
+  describe "GET api_v1_quote_path" do
+    test "redirects on no params", %{conn: conn} do
       conn = get conn, api_v1_quote_path(conn, :get_quotes)
       assert response(conn, 302)
     end
 
-    test "GET gets one quote", %{conn: conn} do
+    test "gets one quote", %{conn: conn} do
       response =
         get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: 1))
         |> json_response(200)
@@ -16,7 +16,7 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(response["quotes"]) === 1 and Map.has_key?(hd(response["quotes"]), "quote")
     end
 
-    test "GET gets many quotes", %{conn: conn} do
+    test "gets many quotes", %{conn: conn} do
       response =
         get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "max"))
         |> json_response(200)
@@ -24,7 +24,30 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(response["quotes"]) > 1
     end
 
-    test "GET return an error on corrupt 'n'", %{conn: conn} do
+    test "gets 10 quotes", %{conn: conn} do
+      response =
+        get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "10"))
+        |> json_response(200)
+
+      assert length(response["quotes"]) === 10
+    end
+
+    test "gets quotes by tags", %{conn: conn} do
+      tag_list = ["ethics", "antispeciesism"]
+
+      response =
+        get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "max", tags: Enum.join(tag_list, ", ")))
+        |> json_response(200)
+
+      quotes = response["quotes"]
+
+      assert length(quotes) > 0
+      assert Enum.all?(quotes, fn(quote) ->
+        Enum.all?(tag_list, &(&1 in quote["tags"]))
+      end)
+    end
+
+    test "returns an error on corrupt 'n'", %{conn: conn} do
       response =
         get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "jk77ggggg"))
         |> json_response(400)
@@ -32,7 +55,7 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert response["error"] =~ "'n' query parameter (if present) should be a positive integer or 'max'"
     end
 
-    test "GET return an error on corrupt 'offset'", %{conn: conn} do
+    test "returns an error on corrupt 'offset'", %{conn: conn} do
       response =
         get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: 1, offset: "jk77ggggg"))
         |> json_response(400)
