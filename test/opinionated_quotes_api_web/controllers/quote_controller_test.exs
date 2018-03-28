@@ -47,6 +47,32 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       end)
     end
 
+    test "gets quotes by tags, case-insensitive", %{conn: conn} do
+      raw_tag_list = ["ethiCs", "AntiSpeciesism"]
+      tag_list = Enum.map(raw_tag_list, &String.downcase/1)
+
+      response =
+        get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "max", tags: Enum.join(raw_tag_list, ", ")))
+        |> json_response(200)
+
+      quotes = response["quotes"]
+
+      assert length(quotes) > 0
+      assert Enum.all?(quotes, fn(quote) ->
+        Enum.all?(tag_list, &(&1 in quote["tags"]))
+      end)
+    end
+
+    test "gets an empty list when an unknown tag is present", %{conn: conn} do
+      tag_list = ["ethics", "lifeissuffering"]
+
+      response =
+        get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "max", tags: Enum.join(tag_list, ", ")))
+        |> json_response(200)
+
+      assert length(response["quotes"]) === 0
+    end
+
     test "returns an error on corrupt 'n'", %{conn: conn} do
       response =
         get(conn, api_v1_quote_path(conn, :get_quotes, rand: "t", n: "jk77ggggg"))

@@ -45,7 +45,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Tag do
     |> parse_all
   end
   def	parse_all(tags)	do
-    Enum.map(tags, &String.trim/1)
+    Enum.map(tags, &(String.trim(&1) |> String.downcase))
     |> Enum.reject(& &1 == "")
     |> Enum.uniq()
 	end
