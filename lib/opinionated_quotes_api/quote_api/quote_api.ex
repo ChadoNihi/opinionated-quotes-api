@@ -6,6 +6,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
   import Ecto.Query, warn: false
   alias OpinionatedQuotesApi.Helpers.Sanitizer
   alias OpinionatedQuotesApi.QuoteAPI.Quote
+  alias OpinionatedQuotesApi.QuoteAPI.Tag
   alias OpinionatedQuotesApi.Repo
 
   @doc """
@@ -20,6 +21,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
   def list_quotes(args) do
     build_query_from_args(args)
     |> Repo.all()
+    # |> filter_nil_fields_shallow()
   end
 
   defp build_query_from_args(args) do
@@ -27,16 +29,20 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
     n = args[:n] || 1
     offset = args[:offset]
     author = args[:author] && Sanitizer.sanitize_sql_like(args[:author])
-    tags = args[:tags]
+    tag_list = Tag.parse_all(args[:tags] || "")
     lang = Sanitizer.sanitize_sql_like(args[:lang]) |> String.downcase
 
     where = build_where(author, lang)
 
     q = from(q in Quote,
+      preload: [:tags],
+      join: tag in assoc(q, :tags),
+      select: %{q | tags: fragment("array_agg(?)", tag.name)},
       where: ^where,
       offset: ^offset,
       limit: ^n,
-      preload: [:tags]
+      group_by: q.id,
+      having: fragment("? <@ array_agg(?)", ^tag_list, tag.name)
     )
 
     if rand do

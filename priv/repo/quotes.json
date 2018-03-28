@@ -161,6 +161,59 @@
       "quote": "Do not be too moral. You may cheat yourself out of much life so. Aim above morality. Be not simply good, be good for something.",
       "author": "Henry David Thoreau",
       "tags": ["utilitarianism", "ethics", "religion", "secularism"]
+    },
+    {
+      "quote": "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.",
+      "source": "The Pragmatic Programmer",
+      "author": "Andy Hunt, Dave Thomas",
+      "tags": ["programming", "software engineering"]
+    },
+    {
+      "quote": "Y'all talk about UX like it's just another feature. For a user, it literally is the product. Full stop. Everything else is inside baseball.",
+      "source": "https://twitter.com/startupljackson/status/523539069444177920?lang=en",
+      "author": "Startup L. Jackson",
+      "tags": ["UX", "startup", "product"]
+    },
+    {
+      "quote": "You will satisfy your interests better if you talk about where you would like to go rather than about where you have come from. Instead of arguing with the other side about the past — about last quarter's costs (which were too high), last week's action (taken without adequate authority), or yesterday's performance (which was less than expected) — talk about what you want to have happen in the future. Instead of asking them to justify what they did yesterday, ask, \"Who should do what tomorrow?\"",
+      "source": "Getting to Yes: Negotiating Agreement Without Giving In",
+      "author": "William Ury, Roger Fisher",
+      "tags": ["negotiation", "business", "politics"]
+    },
+    {
+      "quote": "You cannot take a photo any faster by assigning more photographers. You cannot deliver a speech any quicker by adding more speakers. After a construction site is fi lled with workers, you cannot add any more and hope to increase productivity; they will trip over each other and progress will slow down.",
+      "source": "Ace the Programming Interview: 160 Questions and Answers for Success",
+      "author": "Edward Guiness",
+      "tags": ["productivity", "startup", "analogy", "business", "software engineering"]
+    },
+    {
+      "quote": "Where two or more tools can perform the same task, choose the one that allows for the most valuable work to be done per unit time.",
+      "source": "Information Visualization: Perception for Design",
+      "author": "Colin Ware",
+      "tags": ["productivity", "advice", "utilitarianism", "software engineering", "short"]
+    },
+    {
+      "quote": "When you're asked to provide an estimate, determine whether you're supposed to be estimating or figuring out how to hit a target.",
+      "source": "Software Estimation: Demystifying the Black Art",
+      "author": "Steve McConnell",
+      "tags": ["startup", "advice", "business", "software engineering", "short"]
+    },
+    {
+      "quote": "When one is gripped by excruciating physical pain, one is always shocked at just how frightful it can be.",
+      "source": "The Abolitionist Project",
+      "author": "David Pearce",
+      "tags": ["suffering", "pain", "ethics", "short"]
+    },
+    {
+      "quote": "When it comes to the growth of the size of problems we can attack with an algorithm, we have a reversal: exponential algorithms make polynomially slow progress, while polynomial algorithms advance exponentially fast! For Moore's law to be reflected in the world we need efficient algorithms.",
+      "source": "Algorithms",
+      "author": "Christos Papadimitriou, Sanjoy Dasgupta, Umesh Vazirani",
+      "tags": ["algorithms", "Moore's law", "technology", "progress", "computer science"]
+    },
+    {
+      "quote": "When in doubt, use brute force.",
+      "author": "Ken Thompson",
+      "tags": ["algorithms", "advice", "programming", "computer science", "heuristic", "short"]
     }
   ]
 }
