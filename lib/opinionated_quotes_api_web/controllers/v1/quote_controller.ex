@@ -1,7 +1,7 @@
-defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
+defmodule OpinionatedQuotesApiWeb.V1.QuoteController do
   use OpinionatedQuotesApiWeb, :controller
   alias OpinionatedQuotesApi.QuoteAPI.QuoteAPI
-  import OpinionatedQuotesApiWeb.Router.Helpers, only: [api_v1_quote_path: 3]
+  import OpinionatedQuotesApiWeb.Router.Helpers, only: [v1_quote_path: 3]
 
   @n_max_re ~r/^max/i
   @true_vals_for_rand MapSet.new(["t", nil, "", "true", "1"])
@@ -50,8 +50,8 @@ defmodule OpinionatedQuotesApiWeb.API.V1.QuoteController do
   def get_quotes(conn, params) do
     kw_params =
       Enum.reduce(params, [], fn {k, v}, acc ->  [{String.to_atom(k), v} | acc] end)
-      
-    redirect(conn, to: api_v1_quote_path(
+
+    redirect(conn, to: v1_quote_path(
       conn, :get_quotes, Keyword.merge([rand: "t", n: 1], kw_params)
     ))
   end
