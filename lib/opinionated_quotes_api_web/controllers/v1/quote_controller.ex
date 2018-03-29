@@ -67,16 +67,7 @@ defmodule OpinionatedQuotesApiWeb.V1.QuoteController do
     do
       rand = if MapSet.member?(@true_vals_for_rand, params["rand"]), do: true, else: false
 
-      author = case Map.get(params, "author") do
-        nil -> nil
-        raw -> String.trim(raw)
-      end
-
-      lang = Map.get(params, "lang", "en")
-      |> String.trim()
-      |> String.downcase()
-
-      [rand: rand, n: n, offset: offset, author: author, tags: params["tags"], lang: lang]
+      [rand: rand, n: n, offset: offset, author: params["author"], tags: params["tags"], lang: params["lang"]]
     else
       err_tup -> err_tup
     end

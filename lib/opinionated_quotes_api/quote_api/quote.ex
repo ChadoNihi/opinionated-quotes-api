@@ -21,8 +21,14 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
   def changeset(%Quote{} = quote, tags, attrs) do
     quote
     |> cast(attrs, [:who, :quote, :lang, :src, :author])
+    |> update_change(:who, &String.trim/1)
+    |> update_change(:quote, &String.trim/1)
+    |> update_change(:lang, &(String.trim(&1) |> String.downcase))
+    |> update_change(:src, &String.trim/1)
+    |> update_change(:author, &String.trim/1)
     |> validate_required([:quote])
     |> validate_length(:author, min: 2)
+    |> validate_length(:lang, min: 2, max: 4)
     |> validate_length(:quote, min: 2)
     |> validate_length(:src, min: 2)
     |> validate_length(:who, min: 2)

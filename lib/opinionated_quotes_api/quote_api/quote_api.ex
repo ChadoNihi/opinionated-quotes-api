@@ -26,11 +26,15 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
 
   defp build_query_from_args(args) do
     rand = args[:rand]
-    n = args[:n] || 1
+    n = args[:n]
     offset = args[:offset]
-    author = args[:author] && Sanitizer.sanitize_sql_like(args[:author])
+    author =
+      args[:author] && String.trim(args[:author]) |> Sanitizer.sanitize_sql_like()
     tag_list = Tag.parse_all(args[:tags] || "")
-    lang = Sanitizer.sanitize_sql_like(args[:lang]) |> String.downcase
+    lang = args[:lang]
+      && String.trim(args[:lang])
+      |> String.downcase()
+      |> Sanitizer.sanitize_sql_like()
 
     where = build_where(author, lang)
 
@@ -63,10 +67,11 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
       dynamic
     end
 
-    dynamic([q], (
-      (is_nil(q.lang) and ^lang == "en")
-      or q.lang == ^lang
-    ) or ^dynamic)
+    if lang do
+      dynamic([q], q.lang == ^lang or ^dynamic)
+    else
+      dynamic([q], is_nil(q.lang) or q.lang == "en" or ^dynamic)
+    end
   end
   # def list_quotes(false, n \\ 1, offset \\ 0) do
   #   Repo.all(Quote, (from q in Quote, limit: ^n, offset: ^offset))
