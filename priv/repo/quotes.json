@@ -214,6 +214,23 @@
       "quote": "When in doubt, use brute force.",
       "author": "Ken Thompson",
       "tags": ["algorithms", "advice", "programming", "computer science", "heuristic", "short"]
+    },
+    {
+      "quote": "When are you done? Since design is open-ended, the most common answer to that question is \"When you’re out of time.\"",
+      "source": "Code Complete",
+      "author": "Steve McConnell",
+      "tags": ["design", "software engineering", "startup"]
+    },
+    {
+      "quote": "When a word poses a problem, the simplest solution is to eliminate the word and its synonyms.",
+      "source": "Rationality: From AI to Zombies",
+      "author": "Eliezer Yudkowsky",
+      "tags": ["advice", "rationality", "argument", "short"]
+    },
+    {
+      "quote": "When a measure becomes a target, it ceases to be a good measure.",
+      "author": "Marilyn Strathern",
+      "tags": ["management", "startup", "science", "short", "rule"]
     }
   ]
 }

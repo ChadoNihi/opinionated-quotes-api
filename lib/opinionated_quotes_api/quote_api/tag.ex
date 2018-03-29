@@ -39,7 +39,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Tag do
   end
 
   def parse_all(nil), do: parse_all([])
-  # match str
+  # when string
   def parse_all(tags) when is_binary(tags) do
     String.split(tags || "", ",")
     |> parse_all
