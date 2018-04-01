@@ -73,7 +73,7 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(response["quotes"]) === 0
     end
 
-    test "gets all quotes with EN lang, case-insensitive", %{conn: conn} do
+    test "gets quotes with EN lang, case-insensitive", %{conn: conn} do
       re_en = ~r/^en$/i
 
       response =
@@ -85,6 +85,41 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(quotes) > 0
       assert Enum.all?(quotes, fn(quote) ->
         quote["lang"] == nil or Regex.match?(re_en, quote["lang"])
+      end)
+    end
+
+    test "gets quotes with a matching author", %{conn: conn} do
+      surname = "Pearce"
+
+      response =
+        get(conn, v1_quote_path(conn, :get_quotes, rand: "f", n: "max", author: String.downcase(surname)))
+        |> json_response(200)
+
+      quotes = response["quotes"]
+
+      assert length(quotes) > 0
+      assert Enum.all?(quotes, fn(quote) ->
+        quote["author"] =~ surname
+      end)
+    end
+
+    test "gets quotes with a matching author, lang, and tags", %{conn: conn} do
+      surname = "Pearce"
+      lang = "en"
+      re_en = Regex.compile!("^#{lang}$", "i")
+      tag_list = ["ethics", "antispeciesism"]
+
+      response =
+        get(conn, v1_quote_path(conn, :get_quotes, rand: "f", n: "max", author: String.downcase(surname), lang: lang, tags: Enum.join(tag_list, ", ")))
+        |> json_response(200)
+
+      quotes = response["quotes"]
+
+      assert length(quotes) > 0
+      assert Enum.all?(quotes, fn(quote) ->
+        quote["author"] =~ surname
+        and (quote["lang"] == nil or Regex.match?(re_en, quote["lang"]))
+        and Enum.all?(tag_list, &(&1 in quote["tags"]))
       end)
     end
 

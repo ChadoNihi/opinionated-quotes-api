@@ -58,20 +58,32 @@ defmodule OpinionatedQuotesApi.QuoteAPI.QuoteAPI do
   end
 
   defp build_where(author, lang) do
+    author = author && "%#{author}%"
     # https://hexdocs.pm/ecto/Ecto.Query.html#dynamic/2
-    dynamic = true
+    dynamic = false
 
-    if author do
-      dynamic([q], ilike(q.author, ^author) or ^dynamic)
-    else
-      dynamic
+    cond do
+      author && lang ->
+        dynamic([q], (ilike(q.author, ^author) and (is_nil(q.lang) or q.lang == "en")) or ^dynamic)
+      author ->
+        dynamic([q], ilike(q.author, ^author) or ^dynamic)
+      lang ->
+        dynamic([q], q.lang == ^lang or ^dynamic)
+      :otherwise ->
+        dynamic([q], (is_nil(q.lang) or q.lang == "en") or ^dynamic)
     end
 
-    if lang do
-      dynamic([q], q.lang == ^lang or ^dynamic)
-    else
-      dynamic([q], is_nil(q.lang) or q.lang == "en" or ^dynamic)
-    end
+      # if author do
+      #   dynamic([q], ilike(q.author, ^author) or ^dynamic)
+      # else
+      #   dynamic
+      # end
+
+    # if lang do
+    #   dynamic([q], q.lang == ^lang or ^dynamic)
+    # else
+    #   dynamic([q], ^dynamic or (is_nil(q.lang) or q.lang == "en"))
+    # end
   end
   # def list_quotes(false, n \\ 1, offset \\ 0) do
   #   Repo.all(Quote, (from q in Quote, limit: ^n, offset: ^offset))
