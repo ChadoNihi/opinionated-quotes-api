@@ -1,36 +1,48 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
-</div>
+<section class="section">
+  <h1 class="title">Routes</h1>
+  <h5 class="title is-6">V.1</h5>
+  <span class="tag is-info">GET</span><code>/v1/quotes</code>
+  <!-- <h6 class="subtitle is-6">? Query Parameters</h6> -->
+  <table class="table is-narrow is-hoverable">
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+        <th>Values</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>rand</th>
+        <td>Random?</td>
+        <td>True values: <span class="is-italic">t</span>, <span class="is-italic">true</span>, <span class="is-italic">1</span>. Anything else is false.</td>
+        <td class="is-italic">t</td>
+      </tr>
+      <tr>
+        <th>n</th>
+        <td># of quotes</td>
+        <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ..., <span class="is-italic">max</span></td>
+        <td class="is-italic">1</td>
+      </tr>
+      <tr>
+        <th>offset</th>
+        <td></td>
+        <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ...</td>
+        <td class="is-italic">0</td>
+      </tr>
+      <tr>
+        <th>author</th>
+        <td></td>
+        <td>Strings like <span class="is-italic">pearce</span></td>
+        <td class="is-italic"></td>
+      </tr>
+      <tr>
+        <th>tags</th>
+        <td></td>
+        <td>Comma-separated tags like <span class="is-italic">technology,ethics</span></td>
+        <td class="is-italic"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
