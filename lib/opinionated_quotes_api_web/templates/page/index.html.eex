@@ -59,21 +59,21 @@
             <tr>
               <th>lang</th>
               <td></td>
-              <td>Two-letter ISO 639-1 code like <span class="is-italic">fi</span></td>
+              <td>Two-letter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 639-1</a> code like <span class="is-italic">fi</span></td>
               <td class="is-italic">en</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="column">
-        <h5 class="subtitle is-6">Example response (formatted):</h5>
-        <code>
+        <h5 class="subtitle is-6">Example response from (formatted):</h5>
+        <pre><code>
           {
             "quotes": [
-              
+
             ]
           }
-        </code>
+        </code></pre>
       </div>
     </div>
   </div>

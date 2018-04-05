@@ -1,6 +1,6 @@
 defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
   use OpinionatedQuotesApiWeb.ConnCase
-  # alias OpinionatedQuotesApi.QuoteAPI.Quote
+  alias OpinionatedQuotesApi.QuoteAPI.Quote
 
   describe "GET v1_quote_path" do
     test "redirects on no params", %{conn: conn} do
@@ -24,14 +24,17 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(response["quotes"]) > 1
     end
 
-    test "gets quotes with no nil fields", %{conn: conn} do
+    test "only non-null, public fields are included", %{conn: conn} do
       response =
         get(conn, v1_quote_path(conn, :get_quotes, rand: "f", n: "max"))
         |> json_response(200)
 
       assert length(response["quotes"]) > 1
+
+      public_fields = MapSet.new(Quote.public_fields, &Atom.to_string/1)
+
       assert Enum.all?(response["quotes"], fn(q) ->
-        Enum.all?(q, fn({_k, v}) -> v != nil end)
+        Enum.all?(q, fn({k, v}) -> k in public_fields and v != nil end)
       end)
     end
 

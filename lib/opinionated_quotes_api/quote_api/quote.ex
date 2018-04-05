@@ -5,9 +5,12 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
   alias OpinionatedQuotesApi.QuoteAPI.Quote
   alias OpinionatedQuotesApi.Repo
 
+  @public_fields [:who, :quote, :lang, :src, :author, :tags]
+  def public_fields, do: @public_fields
+
   defimpl Poison.Encoder, for: Quote do
     def encode(quote, options) do
-      Map.drop(quote, [:__meta__, :__struct__])
+      Map.take(quote, Quote.public_fields)
       |> Enum.reject(fn {_k, v} -> is_nil(v) end)
       |> Map.new
       |> Poison.Encoder.Map.encode(options)
@@ -29,7 +32,7 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
   @doc false
   def changeset(%Quote{} = quote, tags, attrs) do
     quote
-    |> cast(attrs, [:who, :quote, :lang, :src, :author])
+    |> cast(attrs, List.delete(@public_fields, :tags))
     |> update_change(:who, &String.trim/1)
     |> update_change(:quote, &String.trim/1)
     |> update_change(:lang, &(String.trim(&1) |> String.downcase))
