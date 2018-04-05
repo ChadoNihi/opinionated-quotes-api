@@ -5,7 +5,16 @@ defmodule OpinionatedQuotesApi.QuoteAPI.Quote do
   alias OpinionatedQuotesApi.QuoteAPI.Quote
   alias OpinionatedQuotesApi.Repo
 
-  @derive {Poison.Encoder, except: [:__meta__]}
+  defimpl Poison.Encoder, for: Quote do
+    def encode(quote, options) do
+      Map.drop(quote, [:__meta__, :__struct__])
+      |> Enum.reject(fn {_k, v} -> is_nil(v) end)
+      |> Map.new
+      |> Poison.Encoder.Map.encode(options)
+    end
+  end
+
+  # @derive {Poison.Encoder, except: [:__meta__]}
   schema "quotes" do
     field :author, :string
     field :quote, :string

@@ -1,48 +1,80 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Routes
+      </h1>
+    </div>
+  </div>
+</section>
+
 <section class="section">
-  <h1 class="title">Routes</h1>
-  <h5 class="title is-6">V.1</h5>
-  <span class="tag is-info">GET</span><code>/v1/quotes</code>
-  <!-- <h6 class="subtitle is-6">? Query Parameters</h6> -->
-  <table class="table is-narrow is-hoverable">
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-        <th>Values</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>rand</th>
-        <td>Random?</td>
-        <td>True values: <span class="is-italic">t</span>, <span class="is-italic">true</span>, <span class="is-italic">1</span>. Anything else is false.</td>
-        <td class="is-italic">t</td>
-      </tr>
-      <tr>
-        <th>n</th>
-        <td># of quotes</td>
-        <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ..., <span class="is-italic">max</span></td>
-        <td class="is-italic">1</td>
-      </tr>
-      <tr>
-        <th>offset</th>
-        <td></td>
-        <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ...</td>
-        <td class="is-italic">0</td>
-      </tr>
-      <tr>
-        <th>author</th>
-        <td></td>
-        <td>Strings like <span class="is-italic">pearce</span></td>
-        <td class="is-italic"></td>
-      </tr>
-      <tr>
-        <th>tags</th>
-        <td></td>
-        <td>Comma-separated tags like <span class="is-italic">technology,ethics</span></td>
-        <td class="is-italic"></td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- <h1 class="title">Routes</h1> -->
+  <h3 class="title is-4">V.1</h3>
+  <div class="box">
+    <div class="columns">
+      <div class="column">
+        <span class="tag is-info">GET</span><code>/v1/quotes</code>
+        <!-- <h6 class="subtitle is-6">? Query Parameters</h6> -->
+        <table class="table is-narrow is-hoverable">
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+              <th>Values</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>rand</th>
+              <td>Random?</td>
+              <td>True values: <span class="is-italic">t</span>, <span class="is-italic">true</span>, <span class="is-italic">1</span>. Anything else is false.</td>
+              <td class="is-italic">t</td>
+            </tr>
+            <tr>
+              <th>n</th>
+              <td># of quotes</td>
+              <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ..., <span class="is-italic">max</span></td>
+              <td class="is-italic">1</td>
+            </tr>
+            <tr>
+              <th>offset</th>
+              <td></td>
+              <td><span class="is-italic">0</span>, <span class="is-italic">1</span>, ...</td>
+              <td class="is-italic">0</td>
+            </tr>
+            <tr>
+              <th>author</th>
+              <td></td>
+              <td>Strings like <span class="is-italic">pearce</span></td>
+              <td class="is-italic"></td>
+            </tr>
+            <tr>
+              <th>tags</th>
+              <td></td>
+              <td>Comma-separated tags like <span class="is-italic">technology,ethics</span></td>
+              <td class="is-italic"></td>
+            </tr>
+            <tr>
+              <th>lang</th>
+              <td></td>
+              <td>Two-letter ISO 639-1 code like <span class="is-italic">fi</span></td>
+              <td class="is-italic">en</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="column">
+        <h5 class="subtitle is-6">Example response (formatted):</h5>
+        <code>
+          {
+            "quotes": [
+              
+            ]
+          }
+        </code>
+      </div>
+    </div>
+  </div>
 </section>

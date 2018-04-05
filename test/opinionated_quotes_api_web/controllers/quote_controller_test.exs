@@ -24,6 +24,17 @@ defmodule OpinionatedQuotesApiWeb.QuoteControllerTest do
       assert length(response["quotes"]) > 1
     end
 
+    test "gets quotes with no nil fields", %{conn: conn} do
+      response =
+        get(conn, v1_quote_path(conn, :get_quotes, rand: "f", n: "max"))
+        |> json_response(200)
+
+      assert length(response["quotes"]) > 1
+      assert Enum.all?(response["quotes"], fn(q) ->
+        Enum.all?(q, fn({_k, v}) -> v != nil end)
+      end)
+    end
+
     test "gets 10 quotes", %{conn: conn} do
       response =
         get(conn, v1_quote_path(conn, :get_quotes, rand: "f", n: "10"))
