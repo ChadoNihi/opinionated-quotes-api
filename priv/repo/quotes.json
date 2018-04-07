@@ -282,13 +282,60 @@
       "quote": "Too many of our preferences reflect nasty behaviours and states of mind that were genetically adaptive in the ancestral environment. Instead, wouldn't it be better if we rewrote our own corrupt code?",
       "source": "The Abolitionist Project",
       "author": "David Pearce",
-      "tags": ["evolution", "ethics", "future", "humans", "paradise engineering"]
+      "tags": ["evolution", "ethics", "future", "humans", "paradise engineering", "transhumanism"]
     },
     {
       "quote": "To be clear, most people who believe in the end-times narratives of their ancient holy texts are passive spectators of the apocalypse. But at the statistical margins are what we might call eschatological activists intent on fulfilling prophecy themselves. Such individuals are the exception, not the rule, but this fact will become increasingly irrelevant in the world anticipated by existential riskologists.",
       "source": "To Survive, We Must Go Extinct — Apocalyptic Terrorism and Transhumanism",
       "author": "Phil Torres",
       "tags": ["x-risks", "religion", "future", "apocalypse"]
+    },
+    {
+      "quote": "There is no great invention, from fire to flying, which has not been hailed as an insult to some god.",
+      "source": "Daedalus; or, Science and the Future",
+      "author": "John Burdon Sanderson Haldane",
+      "tags": ["atheism", "religion", "god", "technology", "science", "short"]
+    },
+    {
+      "quote": "There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other is to make it so complicated that there are no obvious deficiencies.",
+      "author": "Tony Hoare",
+      "tags": ["programming", "software engineering"]
+    },
+    {
+      "quote": "There are two different aspects to a reminder: the signal and the message. Just as in doing an action we can distinguish between knowing what can be done and knowing how to do it, in reminding we must distinguish between the signal—knowing that something is to be remembered, and the message—remembering the information itself.",
+      "source": "The Design of Everyday Things",
+      "author": "Don Norman",
+      "tags": ["design", "UX"]
+    },
+    {
+      "quote": "The very fact that a religious person would be afraid of God withdrawing Its threat to punish them for committing murder, shows that they have a revulsion of murder which is independent of whether God punishes murder or not.  If they had no sense that murder was wrong independently of divine retribution, the prospect of God not punishing murder would be no more existentially horrifying than the prospect of God not punishing sneezing.",
+      "source": "Rationality: From AI to Zombies",
+      "author": "Eliezer Yudkowsky",
+      "tags": ["religion", "atheism", "god", "morality", "rationality"]
+    },
+    {
+      "quote": "The theory of evolution by cumulative natural selection is the only theory we know of that is in principle capable of explaining the existence of organized complexity.",
+      "source": "The Blind Watchmaker",
+      "author": "Richard Dawkins",
+      "tags": ["evolution", "science", "short", "god"]
+    },
+    {
+      "quote": "The reason you negotiate is to produce something better than the results you can obtain without negotiating. What are those results? What is that alternative? What is your BATNA—your Best Alternative To a Negotiated Agreement? That is the standard against which any proposed agreement should be measured. That is the only standard that can protect you both from accepting terms that are too unfavorable and from rejecting terms it would be in your interest to accept.",
+      "source": "Getting to Yes: Negotiating Agreement Without Giving In",
+      "author": "Roger Fisher, William L. Ury",
+      "tags": ["negotiating", "business"]
+    },
+    {
+      "quote": "The pitfall to this \"safety-first\" approach lies in the extreme risk of moral complacency it breeds. Hundreds of millions of human beings, and billions of non-human animals, are not in such a fortunate position. On a universalist utilitarian ethic, or simply a Buddhist-style ethic of compassion, we should systematically apply the same level of urgency to relieving their suffering as one would be justified in exercising if one were oneself tormented by intense pain or suicidal despair. Extreme suffering is the plight of billions of sentient beings alive today, whether in our factory-farms, in a Darwinian state of nature, or a depressed neighbour. Desperate straits mandate taking risks one would otherwise shun.",
+      "source": "The Hedonistic Imperative",
+      "author": "David Pearce",
+      "tags": ["suffering", "transhumanism", "paradise engineering", "ethics", "nature"]
+    },
+    {
+      "quote": "[T]he pain-pleasure axis discloses the world's inbuilt metric of (dis)value, and that acting unethically ultimately is a function of ignorance – ignorance, I would add, about what others feel, and about our not being fundamentally different from others.",
+      "source": "My Disagreements with Brian Tomasik",
+      "author": "Magnus Vinding",
+      "tags": ["suffering", "ethics"]
     }
   ]
 }

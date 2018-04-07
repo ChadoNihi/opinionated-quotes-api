@@ -11,10 +11,12 @@
 <section class="section">
   <!-- <h1 class="title">Routes</h1> -->
   <h3 class="title is-4">V.1</h3>
-  <div class="box">
+  <div class="container is-fullhd">
     <div class="columns">
       <div class="column">
-        <span class="tag is-info">GET</span><code>/v1/quotes</code>
+        <div class="box">
+          <span class="tag is-info is-size-6">GET</span><code class="is-size-5">/v1/quotes</code>
+        </div>
         <!-- <h6 class="subtitle is-6">? Query Parameters</h6> -->
         <table class="table is-narrow is-hoverable">
           <thead>
@@ -66,12 +68,21 @@
         </table>
       </div>
       <div class="column">
-        <h5 class="subtitle is-6">Example response from (formatted):</h5>
-        <pre><code>
+        <% example_path = v1_quote_path(@conn, :get_quotes, rand: "t", n: 2, author: "pearce", tags: "future,transhumanism") %>
+        <h6 class="subtitle is-6">Example response from <a href='<%= example_path %>'><%= URI.decode_www_form(example_path) %></a> (formatted):</h6>
+        <pre class="pre-wrap is-size-7"><code>
           {
-            "quotes": [
-
-            ]
+            "quotes": [{
+              "tags": ["ethics", "evolution", "transhumanism", "future", "paradise engineering", "humans"],
+              "quote": "Too many of our preferences reflect nasty behaviours and states of mind that were genetically adaptive in the ancestral environment. Instead, wouldn't it be better if we rewrote our own corrupt code?",
+              "lang": "en",
+              "author": "David Pearce"
+            }, {
+              "tags": ["science", "transhumanism", "future", "altruism", "paradise engineering"],
+              "quote": "[T]rue hedonic engineering, as distinct from mindless hedonism or reckless personal experimentation, can be profoundly good for our character. Character-building technologies can benefit utilitarians and non-utilitarians alike. Potentially, we can use a convergence of biotech, nanorobotics and information technology to gain control over our emotions and become better (post-)human beings, to cultivate the virtues, strength of character, decency, to become kinder, friendlier, more compassionate: to become the type of (post)human beings that we might aspire to be, but aren't, and biologically couldn't be, with the neural machinery of unenriched minds. Given our Darwinian biology, too many forms of admirable behaviour simply aren't rewarding enough for us to practise them consistently: our second-order desires to live better lives as better people are often feeble echoes of our baser passions.",
+              "lang": "en",
+              "author": "David Pearce"
+            }]
           }
         </code></pre>
       </div>
