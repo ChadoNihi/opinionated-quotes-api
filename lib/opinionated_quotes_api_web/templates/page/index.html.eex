@@ -10,7 +10,7 @@
 
 <section class="section">
   <!-- <h1 class="title">Routes</h1> -->
-  <h3 class="title is-4">V.1</h3>
+  <h3 id="routes-v1" class="title is-4"><a class="is-size-5" href="#routes-v1">#</a> V.1</h3>
   <div class="container is-fullhd">
     <div class="columns">
       <div class="column">
@@ -55,7 +55,7 @@
             <tr>
               <th>tags</th>
               <td></td>
-              <td>Comma-separated tags like <span class="is-italic">technology,ethics</span></td>
+              <td>Comma-separated tags like <span class="is-italic">technology,ethics</span> (means: all quotes w/ both <span class="is-italic">technology</span> AND <span class="is-italic">ethics</span> tags)</td>
               <td class="is-italic"></td>
             </tr>
             <tr>

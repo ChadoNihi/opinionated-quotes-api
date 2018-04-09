@@ -3,6 +3,6 @@ defmodule OpinionatedQuotesApiWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200)
+    assert html_response(conn, 200) =~ "Routes"
   end
 end

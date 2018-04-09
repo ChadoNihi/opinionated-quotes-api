@@ -332,10 +332,53 @@
       "tags": ["suffering", "transhumanism", "paradise engineering", "ethics", "nature"]
     },
     {
+      "quote": "The ocean of male language that confronts modern women in bookstores, television, newspapers, classrooms, parliaments, and businesses does not necessarily come from a male conspiracy to deny women their voice. It may come from an evolutionary history of sexual selection in which the male motivation to talk was vital to their reproduction.",
+      "source": "The Mating Mind: How Sexual Choice Shaped the Evolution of Human Nature",
+      "author": "Geoffrey Miller",
+      "tags": ["evolution", "society", "males", "humans"]
+    },
+    {
       "quote": "[T]he pain-pleasure axis discloses the world's inbuilt metric of (dis)value, and that acting unethically ultimately is a function of ignorance – ignorance, I would add, about what others feel, and about our not being fundamentally different from others.",
       "source": "My Disagreements with Brian Tomasik",
       "author": "Magnus Vinding",
       "tags": ["suffering", "ethics"]
+    },
+    {
+      "quote": "The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it.",
+      "source": "The Computer for the 21st Century",
+      "author": "Mark Weiser",
+      "tags": ["technology", "society"]
+    },
+    {
+      "quote": "The life of a designer is a life of fight: fight against the ugliness.",
+      "source": "Helvetica",
+      "author": "Massimo Vignelli",
+      "tags": ["design", "short"]
+    },
+    {
+      "quote": "The first thing to learn in intercourse with others is noninterference with their own peculiar ways of being happy, provided those ways do not assume to interfere by violence with ours.",
+      "author": "William James",
+      "tags": ["humans", "society"]
+    },
+    {
+      "quote": "The fact that one can lose one's sense of self in an ocean of tranquility does not mean that one's consciousness is immaterial or that it presided over the birth of the universe.",
+      "source": "On Spiritual Truths",
+      "author": "Sam Harris",
+      "tags": ["atheism", "consciousness", "skepticism"]
+    },
+    {
+      "quote": "The fact that a program can find a solution in principle does not mean that the program contains any of the mechanisms needed to find it in practice.",
+      "tags": ["programming", "short", "software engineering"]
+    },
+    {
+      "quote": "The critical attitude may be described as the conscious attempt to make our theories, our conjectures, suffer in our stead in the struggle for the survival of the fittest. It gives us a chance to survive the elimination of an inadequate hypothesis — when a more dogmatic attitude would eliminate it by eliminating us.",
+      "source": "Conjectures and Refutations",
+      "author": "Karl Popper",
+      "tags": ["rationality", "science", "skepticism"]
+    },
+    {
+      "quote": "The anti-work of anti-epistemology is to manufacture belief without evidence, and in large answer spaces, attention without evidence is more than halfway to belief without evidence. Someone who spends all day pondering whether the Trinity does or does not exist - rather than Allah, Thor, or the Flying Spaghetti Monster - is more than halfway converted to Christianity.",
+      "tags": ["rationality", "science", "skepticism", "religion", "god"]
     }
   ]
 }
