@@ -379,6 +379,102 @@
     {
       "quote": "The anti-work of anti-epistemology is to manufacture belief without evidence, and in large answer spaces, attention without evidence is more than halfway to belief without evidence. Someone who spends all day pondering whether the Trinity does or does not exist - rather than Allah, Thor, or the Flying Spaghetti Monster - is more than halfway converted to Christianity.",
       "tags": ["rationality", "science", "skepticism", "religion", "god"]
+    },
+    {
+      "quote": "Reason shows me that if my happiness is desirable and good, the equal happiness of any other person must be equally desirable.",
+      "source": "The Methods of Ethics",
+      "author": "Henry Sidgwick",
+      "tags": ["rationality", "reason", "short", "ethics"]
+    },
+    {
+      "quote": "[I]n the case of extreme suffering, one can argue that the word \"problem\" is a strong contender for most understated euphemism in history.",
+      "source": "Effective Altruism: How Can We Best Help Others?",
+      "author": "Magnus Vinding",
+      "tags": ["suffering", "ethics"]
+    },
+    {
+      "quote": "When spending resources on increasing the number of beings instead of preventing extreme suffering, one is essentially saying to the victims: \"I could have helped you, but I didn’t, because I think it’s more important that individuals are brought into existence. Sorry.\"",
+      "source": "The One-Paragraph Case for Suffering-Focused Ethics",
+      "author": "Simon Knutsson",
+      "tags": ["suffering", "ethics", "negative utilitarianism", "effective altruism"]
+    },
+    {
+      "quote": "[F]rom the moral point of view, pain cannot be outweighed by pleasure, and especially not one man's pain by another man's pleasure. Instead of the greatest happiness for the greatest number, one should demand, more modestly, the least amount of avoidable suffering for all; [...]",
+      "source": "The Open Society and Its Enemies",
+      "author": "Karl Popper",
+      "tags": ["suffering", "ethics", "negative utilitarianism", "utilitarianism"]
+    },
+    {
+      "quote": "It adds to clarity in the field of ethics if we formulate our demands negatively, i.e. if we demand the elimination of suffering rather than the promotion of happiness. Similarly, it is helpful to formulate the task of scientific method as the elimination of false theories (from the various theories tentatively proffered) rather than the attainment of established truths.",
+      "source": "The Open Society and Its Enemies",
+      "author": "Karl Popper",
+      "tags": ["suffering", "ethics", "negative utilitarianism", "utilitarianism", "science"]
+    },
+    {
+      "quote": "Custom will reconcile people to any atrocity, and fashion will drive them to acquire any custom.",
+      "author": "George Bernard Shaw",
+      "tags": ["ethics", "humans", "short"]
+    },
+    {
+      "quote": "That which can be asserted without evidence, can be dismissed without evidence.",
+      "author": "Christopher Hitchens",
+      "tags": ["religion", "atheism", "science", "skepticism", "short"]
+    },
+    {
+      "quote": "Some people find it difficult to understand how we can see the world properly when the image is upside down. The right way to think about this is to adopt a computational perspective. We do not perceive what is on the retina; instead, a percept is formed through a complex chain of neural computations. A control computer does not care which way is up, and inversion of the image is the least of the brain's computational problems.",
+      "source": "Information Visualization: Perception for Design",
+      "author": "Colin Ware",
+      "tags": ["brain", "science", "AI"]
+    },
+    {
+      "quote": "Simply by deciding to have genetically unenriched children, for instance, one perpetuates the biology of suffering by bringing more code for its substrates into world. A healthy caution toward untested novelties should not collapse into status quo bias.",
+      "source": "The Hedonistic Imperative",
+      "author": "David Pearce",
+      "tags": ["transhumanism", "suffering", "ethics"]
+    },
+    {
+      "quote": "Ribosomes are proof that nanomachines built of protein and RNA can be programmed to build complex molecules.",
+      "author": "Kim Eric Drexler",
+      "tags": ["science", "short", "technology", "nanotechnology"]
+    },
+    {
+      "quote": "Remember that a person's name is, to that person, the sweetest and most important sound in any language.",
+      "source": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "tags": ["humans", "psychology", "short"]
+    },
+    {
+      "quote": "Religion is about turning untested belief into unshakable truth through the power of institutions and the passage of time.",
+      "author": "Richard Dawkins",
+      "tags": ["religion", "atheism", "short", "skepticism", "society"]
+    },
+    {
+      "quote": "Political language [...] is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind.",
+      "source": "Politics and the English Language",
+      "author": "George Orwell",
+      "tags": ["manipulation", "politics", "short"]
+    },
+    {
+      "quote": "Nobody made a greater mistake than he who did nothing because he could do only a little.",
+      "author": "Edmund Burke",
+      "tags": ["short"]
+    },
+    {
+      "quote": "Paradoxically, our sense of continuity comes from our marvelous insensitivity to most kinds of changes rather than from any genuine perceptiveness. Existence seems continuous to us not because we continually experience what is happening in the present, but because we hold to our memories of how things were in the recent past. Without those short-term memories, all would seem entirely new at every instant, and we would have no sense at all of continuity or, for that matter, of existence.",
+      "source": "Society Of Mind",
+      "author": "Marvin Minsky",
+      "tags": ["consciousness", "AI", "brain"]
+    },
+    {
+      "quote": "Our present-day neurochemical cocktail, we are asked to believe, is the medium through which alien realms of consciousness can be grasped and neutrally appraised from a third-person perspective. Empirical research suggests this optimism is at best naïve.",
+      "author": "David Pearce",
+      "tags": ["consciousness", "transhumanism", "brain", "skepticism"]
+    },
+    {
+      "quote": "Paradoxically, our sense of continuity comes from our marvelous insensitivity to most kinds of changes rather than from any genuine perceptiveness. Existence seems continuous to us not because we continually experience what is happening in the present, but because we hold to our memories of how things were in the recent past. Without those short-term memories, all would seem entirely new at every instant, and we would have no sense at all of continuity or, for that matter, of existence.",
+      "source": "Society Of Mind",
+      "author": "Marvin Minsky",
+      "tags": ["consciousness", "AI", "brain"]
     }
   ]
 }

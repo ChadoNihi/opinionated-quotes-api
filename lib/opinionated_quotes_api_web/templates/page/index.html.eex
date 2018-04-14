@@ -55,7 +55,7 @@
             <tr>
               <th>tags</th>
               <td></td>
-              <td>Comma-separated tags like <span class="is-italic">technology,ethics</span> (means: all quotes w/ both <span class="is-italic">technology</span> AND <span class="is-italic">ethics</span> tags)</td>
+              <td>Comma-separated tags like <span class="is-italic">technology,ethics</span> (joined by the AND operator)</td>
               <td class="is-italic"></td>
             </tr>
             <tr>
