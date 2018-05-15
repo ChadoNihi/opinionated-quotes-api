@@ -13,10 +13,10 @@ config :opinionated_quotes_api, OpinionatedQuotesApiWeb.Endpoint,
   check_origin: false,
   watchers: [
     node: [
-      "node_modules/.bin/webpack-dev-server", "--inline", "--colors", "--hot",
+      "node_modules/.bin/webpack-dev-server", "--mode", "development", "--inline", "--colors", "--hot",
       "--stdin", "--host", "localhost", "--port", "8080", "--public",
       "localhost:8080",
-      cd: Path.expand("../src_assets", __DIR__)
+      cd: Path.expand("..", __DIR__)
     ]
   ]
 

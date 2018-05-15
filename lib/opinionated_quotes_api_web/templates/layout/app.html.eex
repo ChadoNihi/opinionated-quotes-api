@@ -10,7 +10,7 @@
     <title>Free Quotes API - Opinionated Quotes API</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/index.css") %>">
-    <!-- <script async defer src="<%= webpack_js_path(@conn, "/js/index.js") %>"></script> -->
+    <!-- <script async defer src="<%= static_path(@conn, "/js/index.js") %>"></script> -->
   </head>
 
   <body>

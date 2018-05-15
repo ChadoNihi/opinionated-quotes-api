@@ -16,3 +16,5 @@ erl_crash.dump
 /config/*.secret.exs
 todos.md
 /node_modules
+/tmp
+/priv/static/**/*.gz

@@ -19,10 +19,10 @@ use Mix.Config
 #   url: [host: "example.com", port: 80],
 #   cache_static_manifest: "priv/static/cache_manifest.json"
 
-# From https://cloud.google.com/community/tutorials/elixir-phoenix-on-google-compute-engine
 config :opinionated_quotes_api, OpinionatedQuotesApiWeb.Endpoint,
   load_from_system_env: true,
   http: [port: "${PORT}"],
+  url: [host: "localhost", port: {:system, "PORT"}],
   check_origin: false,
   server: true,
   root: ".",
