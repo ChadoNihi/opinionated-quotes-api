@@ -22,11 +22,23 @@ use Mix.Config
 config :opinionated_quotes_api, OpinionatedQuotesApiWeb.Endpoint,
   load_from_system_env: true,
   http: [port: "${PORT}"],
-  url: [host: "localhost", port: {:system, "PORT"}],
+  # url: [host: "localhost", port: {:system, "PORT"}],
+  url: [host: "localhost", port: 80],
   check_origin: false,
+  secret_key_base: "${SECRET_KEY_BASE}",
   server: true,
   root: ".",
   cache_static_manifest: "priv/static/cache_manifest.json"
+
+config :opinionated_quotes_api, OpinionatedQuotesApi.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  ssl: true,
+  # username: "postgres",
+  # password: "postgres",
+  # database: "opinionated_quotes_api_prod",
+  "database": "",
+  pool_size: 1
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -71,4 +83,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
